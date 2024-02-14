@@ -83,7 +83,7 @@ async def get_score(ctx, name: str, realm: Optional[str] = 'Tichondrius'):
 async def get_ilvl(ctx, name: str, realm: Optional[str] = 'Tichondrius'):
     endpoint = await build_request_url(name.capitalize(), realm.capitalize())
     res = await http_get(url=endpoint)
-    await ctx.send(f"{res['character']}, {res['realm']} m+ score {res['ilvl']}")
+    await ctx.send(f"{res['character']}, {res['realm']} ilvl {res['ilvl']}")
 
 
 async def get_leaderboard() -> str:
